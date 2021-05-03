@@ -8,7 +8,7 @@ steps:
   - pip install -r requirements.txt
   - pytest --help
 
- - name: docker build
+- name: docker build
   image: plugins/docker
   tags:
     - latest
