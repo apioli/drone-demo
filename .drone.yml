@@ -8,9 +8,12 @@ steps:
   - pip install -r requirements.txt
   - pytest --help
 
-- name: docker build
+- name: docker  
   image: plugins/docker
   settings:
+    username: kevinbacon
+    password: pa55word
+    repo: foo/bar
     tags:
       - latest
       - '1.0.1'
