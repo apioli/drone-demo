@@ -8,6 +8,14 @@ steps:
   - pip install -r requirements.txt
   - pytest --help
 
+- name: docker build
+  image: docker
+  commands:
+  - docker build .
+  - docker images
+  volumes:
+  - /var/run/docker.sock:/var/run/docker.sock
+
 - name: docker  
   image: plugins/docker
   settings:
